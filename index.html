@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation">
+   <nav id="navbar-example" class="navbar navbar-fixed-top navbar-static navbar-inverse" role="navigation">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -18,7 +18,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">CSV Worksets Example</a>
+          <a class="navbar-brand" href="#">HTRC - Prototype CSV Editor</a>
         </div>
         <div class="collapse navbar-collapse bs-js-navbar-collapse">
           <ul class="nav navbar-nav">
@@ -42,6 +42,8 @@
       
      <div class="container">
         <div class="row">
+            <div class="col-12"><p>Welcome to the prototype HTRC Editor. This tool lets you edit workset csv files. You can <a  data-toggle="modal" href="#localUploadModal">load or add files</a> from your computer, edit them in the browser, then <a class='download-csv'>save them</a> back to your computer. The ability to save back to your HTRC account is forthcoming.</p>
+            <a  data-toggle="modal" href="#localUploadModal" class='btn'>Start here.</a></div>
             <div class="alert"></div>
         </div>
         <div class="row">

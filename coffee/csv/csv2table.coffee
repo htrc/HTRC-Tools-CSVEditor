@@ -6,6 +6,8 @@ define(['jquery', 'handsontable', 'csvparse'], ($) ->
     a = (csvdata) ->
         data = $.csv.toArrays(csvdata)
         
+        $('#test-div').show()
+        
         $('#test-div').handsontable({
           data: data[1..]
           colHeaders: data[0]

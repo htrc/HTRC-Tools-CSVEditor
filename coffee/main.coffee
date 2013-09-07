@@ -27,13 +27,14 @@ require.config({
 require(['jquery', 'FileSaver', 'file/setupFileUpload', 'file/setupRemoteFileLoad', 'csv/table2csv', 'csv/csv2table', 'alert', 'bootstrap'],
        ($, saveAs, setupFileUpload, setupRemoteFileLoad, table2csv, csv2table, alert) ->
             $tablediv = $("#test-div")
+            $tablediv.hide()
             setupFileUpload($('#localUploadModal .loadFile'), $('#files'), $tablediv)
             setupFileUpload($('#localUploadModal .appendFile'), $('#files'), $tablediv, true) #Append = true
             setupRemoteFileLoad($('#remoteUploadModal .loadFile'), $tablediv)
             setupRemoteFileLoad($('#remoteUploadModal .appendFile'), $tablediv, true) # Append = true
             
             #Add a default table
-            csv2table("vol_id, class\n")
+            csv2table("vol_id, class\n , ")
             
             $(".download-csv").bind("click", (e) ->
                 csvdata = table2csv($tablediv)

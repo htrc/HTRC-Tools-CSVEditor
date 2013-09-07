@@ -29,11 +29,12 @@
   require(['jquery', 'FileSaver', 'file/setupFileUpload', 'file/setupRemoteFileLoad', 'csv/table2csv', 'csv/csv2table', 'alert', 'bootstrap'], function($, saveAs, setupFileUpload, setupRemoteFileLoad, table2csv, csv2table, alert) {
     var $tablediv;
     $tablediv = $("#test-div");
+    $tablediv.hide();
     setupFileUpload($('#localUploadModal .loadFile'), $('#files'), $tablediv);
     setupFileUpload($('#localUploadModal .appendFile'), $('#files'), $tablediv, true);
     setupRemoteFileLoad($('#remoteUploadModal .loadFile'), $tablediv);
     setupRemoteFileLoad($('#remoteUploadModal .appendFile'), $tablediv, true);
-    csv2table("vol_id, class\n");
+    csv2table("vol_id, class\n , ");
     return $(".download-csv").bind("click", function(e) {
       var blob, csvdata;
       csvdata = table2csv($tablediv);

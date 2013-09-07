@@ -5,6 +5,7 @@
     a = function(csvdata) {
       var data;
       data = $.csv.toArrays(csvdata);
+      $('#test-div').show();
       $('#test-div').handsontable({
         data: data.slice(1),
         colHeaders: data[0],
