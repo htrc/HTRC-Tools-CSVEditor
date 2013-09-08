@@ -34,7 +34,7 @@ require(['jquery', 'FileSaver', 'file/setupFileUpload', 'file/setupRemoteFileLoa
             setupRemoteFileLoad($('#remoteUploadModal .appendFile'), $tablediv, true) # Append = true
             
             #Add a default table
-            csv2table("vol_id, class\n , ")
+            csv2table("volume_id, class\n , ")
             
             $(".download-csv").bind("click", (e) ->
                 csvdata = table2csv($tablediv)
