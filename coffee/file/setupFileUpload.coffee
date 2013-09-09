@@ -15,11 +15,9 @@ define(['file/checkForFileAPI', 'file/loadLocalFile', 'alert', 'csv/csv2table', 
                         data = data.split(/\r\n|\n|\r/gm)[1..]
                         data = data.join('\n')
                         data = "#{oldData}\n#{data}"
-                        console.log data
                     csv2table(data)
             else
                 callback = (data) ->
-                    console.log "Loading new data:\n #{data}"
                     csv2table(data)
             
             $el.bind('click', (e) -> loadLocalFile($fileSelector, callback))

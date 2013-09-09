@@ -16,13 +16,11 @@
               data = data.split(/\r\n|\n|\r/gm).slice(1);
               data = data.join('\n');
               data = "" + oldData + "\n" + data;
-              console.log(data);
             }
             return csv2table(data);
           };
         } else {
           callback = function(data) {
-            console.log("Loading new data:\n " + data);
             return csv2table(data);
           };
         }

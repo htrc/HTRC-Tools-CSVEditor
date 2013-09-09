@@ -53,6 +53,28 @@
         <p id="list"></p>
         </div>
         <div class="row">
+          <!-- Column Heading Modal -->
+          <div class="modal fade" id="colNameModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title">Name your new column</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="fileLocInput">Name</label>
+                        <input type="text" class="form-control" id="colNameInput" placeholder="class">
+                      </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default nameCol" data-dismiss="modal"><span class="glyphicon glyphicon-cloud-download"></span> Create</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          
+        
           <!-- Modal -->
           <div class="modal fade" id="remoteUploadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
